@@ -14,7 +14,7 @@ def test_adventofcode3():
     assert result == 3121910778619
 
 def test_max_joltage_per_battery():
-    assert maxbateryjoltage(list(str(987654321111111))) == '987654321111'
-    assert maxbateryjoltage(list(str(811111111111119))) == '811111111119'
-    assert maxbateryjoltage(list(str(234234234234278))) == '434234234278'
-    assert maxbateryjoltage(list(str(818181911112111))) == '888911112111'
+    assert max_batery_joltage(list(str(987654321111111))) == '987654321111'
+    assert max_batery_joltage(list(str(811111111111119))) == '811111111119'
+    assert max_batery_joltage(list(str(234234234234278))) == '434234234278'
+    assert max_batery_joltage(list(str(818181911112111))) == '888911112111'
