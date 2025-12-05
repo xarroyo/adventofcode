@@ -3,10 +3,7 @@ from infrastructue.utils import is_in_range, merge_overlapping_ranges
 
 
 def is_fresh(value: int, inventory: list) -> bool:
-    for i in inventory:
-        if is_in_range(value, i):
-            return True, i
-    return False, []
+    return any(is_in_range(value, i) for i in inventory)
 
 def clean_inventory(inventory):
     tuples = [tuple(r) if isinstance(r, list) else r for r in inventory]
@@ -24,7 +21,7 @@ if __name__ == "__main__":
     ingredients = [int(x) for x in data if x and "-" not in x]
 
     # Part 1
-    print(sum( is_fresh(ingredient, inventory)[0] for ingredient in ingredients))
+    print(sum( is_fresh(ingredient, inventory) for ingredient in ingredients))
 
     # Part 2
     merged_inventory = clean_inventory(inventory)

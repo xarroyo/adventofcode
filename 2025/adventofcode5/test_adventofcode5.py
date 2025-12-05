@@ -10,12 +10,12 @@ data = [
 inventory = [ (int(x.split("-")[0]), int(x.split("-")[1])) for x in data]
 
 def test_is_fresh():
-    assert not is_fresh(1, inventory)[0]
-    assert is_fresh(5, inventory)[0]
-    assert not is_fresh(8, inventory)[0]
-    assert is_fresh(11, inventory)[0]
-    assert is_fresh(17, inventory)[0]
-    assert not is_fresh(32, inventory)[0]
+    assert not is_fresh(1, inventory)
+    assert is_fresh(5, inventory)
+    assert not is_fresh(8, inventory)
+    assert is_fresh(11, inventory)
+    assert is_fresh(17, inventory)
+    assert not is_fresh(32, inventory)
 
 def test_fresh_ingredient_ranges():
     new_inventory = clean_inventory(inventory)
