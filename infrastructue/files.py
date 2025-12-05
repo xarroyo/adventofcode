@@ -6,4 +6,4 @@ def read_file_to_list(filename):
     project_root = Path(__file__).parent.parent
     input_file = project_root / filename
     with open(input_file, "r", encoding="utf-8") as file:
-        return [int(line.strip()) for line in file]
+        return [line.strip() for line in file]
