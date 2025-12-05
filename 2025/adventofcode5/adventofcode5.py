@@ -23,5 +23,9 @@ if __name__ == "__main__":
     inventory = [ (int(x.split("-")[0]), int(x.split("-")[1])) for x in data if "-" in x]
     ingredients = [int(x) for x in data if x and "-" not in x]
 
+    # Part 1
+    print(sum( is_fresh(ingredient, inventory)[0] for ingredient in ingredients))
+
+    # Part 2
     merged_inventory = clean_inventory(inventory)
     print(fresh_ingredient_ranges(merged_inventory))
